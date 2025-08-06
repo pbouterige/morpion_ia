@@ -4,6 +4,8 @@
 #include <vector>
 #include <iostream>
 #include "Human.hpp"
+#include "AI.hpp"
+
 
 
 class Board {

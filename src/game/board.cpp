@@ -99,11 +99,11 @@ int Board::play_game() {
     while (!(results = isFinished())) {
         displayBoard();
         int x, y;
-        playerX->makeMove(x, y);
+        playerX->makeMove(x, y, *this);
         // Validate move
         while (x < 0 || x >= 3 || y < 0 || y >= 3 || getCell(x, y) != EMPTY) {
             std::cout << "Invalid move. Try again: ";
-            playerX->makeMove(x, y);
+            playerX->makeMove(x, y, *this);
         }
         setCell(x, y, playerX->getSymbol());
         
@@ -112,11 +112,11 @@ int Board::play_game() {
             break;
         }
 
-        playerO->makeMove(x, y);
+        playerO->makeMove(x, y, *this);
         // Validate move
         while (x < 0 || x >= 3 || y < 0 || y >= 3 || getCell(x, y) != EMPTY) {
             std::cout << "Invalid move. Try again: ";
-            playerO->makeMove(x, y);
+            playerO->makeMove(x, y, *this);
         }
         setCell(x, y, playerO->getSymbol());
     }

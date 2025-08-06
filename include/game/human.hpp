@@ -8,7 +8,7 @@ class Human : public Player {
         Human(const std::string& name, symbols symbol);
         virtual ~Human();
 
-        virtual void makeMove(int & x, int & y) override;
+        virtual void makeMove(int & x, int & y, Board & board) override;
 };
 
 #endif

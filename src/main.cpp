@@ -8,7 +8,7 @@ int main() {
     // Initialize the game board and players
     Board gameBoard{};
     Human playerX("Player X", PLAYER_X);
-    Human playerO("Player O", PLAYER_O);
+    AI playerO("Player O", PLAYER_O);
 
     gameBoard.setPlayerX(&playerX);
     gameBoard.setPlayerO(&playerO);

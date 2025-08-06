@@ -9,6 +9,7 @@ enum symbols {
     PLAYER_O = 2
 };
 
+class Board; // Forward declaration
 
 class Player {
     protected:
@@ -23,7 +24,7 @@ class Player {
         symbols getSymbol() const;
 
         // Méthode virtuelle pure pour rendre la classe abstraite
-        virtual void makeMove(int & x, int & y) = 0;
+        virtual void makeMove(int & x, int & y, Board & board) = 0;
 };
 
 #endif
