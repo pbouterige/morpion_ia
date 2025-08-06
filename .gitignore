@@ -3,6 +3,29 @@
 *.temp
 *.log
 
+# Fichiers de build CMake
+build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Fichiers compilés
+*.o
+*.obj
+*.exe
+*.out
+*.app
+morpion_ia
+
+# Fichiers de debug
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
 # Fichiers de cache
 __pycache__/
 *.py[cod]
@@ -19,7 +42,6 @@ ENV/
 .env.local
 
 # Fichiers de build
-build/
 dist/
 *.egg-info/
 

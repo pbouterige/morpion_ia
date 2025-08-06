@@ -1,6 +1,6 @@
 # Morpion IA
 
-Un jeu de morpion (tic-tac-toe) avec intelligence artificielle.
+Un jeu de morpion (tic-tac-toe) avec intelligence artificielle en C++.
 
 ## Description
 
@@ -8,11 +8,16 @@ Ce projet implémente un jeu de morpion classique avec la possibilité de jouer 
 
 ## Fonctionnalités
 
-- Interface de jeu intuitive
+- Interface de jeu en console
 - Intelligence artificielle pour l'adversaire
 - Différents niveaux de difficulté
 - Sauvegarde des parties
 - Statistiques de jeu
+
+## Prérequis
+
+- CMake 3.10 ou supérieur
+- Compilateur C++ compatible (GCC, Clang, MSVC)
 
 ## Installation
 
@@ -22,16 +27,23 @@ git clone <url-du-depot>
 cd morpion_ia
 ```
 
-2. Installez les dépendances (si nécessaire) :
+2. Créez un dossier de build :
 ```bash
-pip install -r requirements.txt
+mkdir build
+cd build
+```
+
+3. Configurez et compilez :
+```bash
+cmake ..
+make
 ```
 
 ## Utilisation
 
 Lancez le jeu avec :
 ```bash
-python main.py
+./morpion_ia
 ```
 
 ## Structure du projet
@@ -40,15 +52,22 @@ python main.py
 morpion_ia/
 ├── README.md
 ├── .gitignore
-├── main.py
-├── game/
-│   ├── __init__.py
-│   ├── board.py
-│   ├── player.py
-│   └── ai.py
-└── utils/
-    ├── __init__.py
-    └── helpers.py
+├── CMakeLists.txt
+├── src/
+│   ├── main.cpp
+│   ├── game/
+│   │   ├── board.cpp
+│   │   ├── player.cpp
+│   │   └── ai.cpp
+│   └── utils/
+│       └── helpers.cpp
+└── include/
+    ├── game/
+    │   ├── board.h
+    │   ├── player.h
+    │   └── ai.h
+    └── utils/
+        └── helpers.h
 ```
 
 ## Contribution
